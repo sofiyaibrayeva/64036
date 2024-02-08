@@ -1,0 +1,99 @@
+---
+title: "practiceactivity_ibrayeva"
+author: "sofiya"
+date: "2024-02-08"
+output: html_document
+---
+
+***Sofiya Ibrayeva***
+
+# Purpose of the assignment
+
+The purpose of this assignment is to engage with the R software.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Create a new variable 'b' with value 1947.01 and check the class of 'b'
+
+```{r}
+b <- 1947.01
+class(b)
+```
+
+```{r}
+class_b <- class(b)
+print(paste("Class of b:", class_b))
+```
+
+## 2. Convert 'b' from previous exercise to character and store the result into a new variable 'b_char'
+
+```{r}
+b_char <- "1947.01"
+class_b_char <- class(b_char)
+print(paste("Class of b_char:", class_b_char))
+```
+
+## 3. Create a vector containing following mixed elements {1, 'a', 2, 'b'} and find out its class
+
+```{r}
+vector1 <- c(1, 'a', 2, 'b')
+class_vector1 <- class(vector1)
+print(paste("Class of vector1:", class_vector1))
+```
+
+## 4. Create a dataframe and name it DF. This dataframe should contain Three columns with the following names C1, C2 and C3. C1 should contain numeric values 1 and 4.37. C2 should contain "Red" and "Blue" and C3 should contain TRUE and FALSE
+
+```{r}
+df1 <- data.frame(C1=c(1, 4.37), C2=c('Red', 'Blue'), C3=c(T, F))
+print(df1)
+```
+
+## 5. Select and print C1 column of the DF dataframe in the previous example
+
+```{r}
+df1$C1
+df1$C2
+```
+
+```{r}
+summary_df1 <- summary(df1)
+print("Summary statistics of df1:")
+print(summary_df1)
+```
+
+```{r}
+subset_df1 <- subset(df1, C1 > 2)
+print("Subset of df1 where C1 > 2:")
+print(subset_df1)
+```
+
+## 6. Show the frequency (i.e. count) of each of the countries in the data frame.
+
+```{r}
+df2 <- data.frame(V1=1:6, Countries=c('US', 'UK', 'UK', 'India', 'China', 'India'))
+df2
+```
+
+```{r}
+table(df2$Countries)
+```
+
+## 7. Define a variable x=0.75. write a code to crat a variable y whose value is dependent on the value of x. If x is positive, y should be set to 14 otherwise it should be set -19.7. Change the value of x to -1 and evaluate your code again.
+
+```{r}
+x <- 0.75
+if (x>0){y=14}else{
+y=-19.7}
+print(x)
+print(y)
+```
+
+```{r}
+x <--1
+if (x>0){y=14}else{
+y=-19.7}
+print(x)
+print(y)
+```
